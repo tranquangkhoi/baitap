@@ -1,13 +1,21 @@
-DROP TABLE IF EXISTS billionaires;
 
-CREATE TABLE billionaires (
-  id INT AUTO_INCREMENT  PRIMARY KEY,
-  first_name VARCHAR(250) NOT NULL,
-  last_name VARCHAR(250) NOT NULL,
-  career VARCHAR(250) DEFAULT NULL
+DROP TABLE IF EXISTS teachers;
+CREATE TABLE teachers (
+  user_id INT PRIMARY KEY,
+  phone VARCHAR(50) NOT NULL,
+  experiences INT NOT NULL
 );
 
-INSERT INTO billionaires (first_name, last_name, career) VALUES
-  ('Aliko', 'Dangote', 'Billionaire Industrialist'),
-  ('Bill', 'Gates', 'Billionaire Tech Entrepreneur'),
-  ('Folrunsho', 'Alakija', 'Billionaire Oil Magnate');
+DROP TABLE IF EXISTS students;
+CREATE TABLE students (
+  user_id INT NOT NULL PRIMARY KEY,
+  school_year VARCHAR(50) NOT NULL
+);
+
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (
+  user_id INT AUTO_INCREMENT  PRIMARY KEY,
+  full_name VARCHAR(50) NOT NULL,
+  email VARCHAR(20) NOT NULL,
+  password VARCHAR(20) NOT NULL
+);
