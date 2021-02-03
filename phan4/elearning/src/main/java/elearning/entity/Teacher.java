@@ -19,7 +19,7 @@ import lombok.Data;
 @Data
 @Entity
 @Table(name = "teachers")
-public class Teacher extends User implements Serializable {
+public class Teacher extends User implements Serializable, IUserRequest {
     private String phone;
 
     private Integer experiences;

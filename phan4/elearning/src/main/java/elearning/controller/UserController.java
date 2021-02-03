@@ -5,10 +5,8 @@
  */
 package elearning.controller;
 
-import elearning.repository.UserRepository;
-import java.util.List;
+import elearning.service.UserService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import elearning.entity.User;
@@ -16,7 +14,7 @@ import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import elearning.dto.UserReqDto;
-import io.swagger.annotations.ApiOperation;
+import elearning.dto.UserResDto;
 /**
  *
  * @author Admin
@@ -25,15 +23,10 @@ import io.swagger.annotations.ApiOperation;
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class UserController {
-    private final UserRepository userRepository;
-
-    @GetMapping("/users")
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
+    private final UserService userService;
     
     @PostMapping("/users")
-    public User createUser(@Valid @RequestBody UserReqDto user) {
-        return null;
+    public UserResDto createUser(@Valid @RequestBody UserReqDto user) {
+        return userService.saveUser(user);
     }
 }

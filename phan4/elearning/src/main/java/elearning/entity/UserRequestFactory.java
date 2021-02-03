@@ -1,0 +1,19 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package elearning.entity;
+
+/**
+ *
+ * @author Admin
+ */
+public class UserRequestFactory {
+    public IUserRequest createRequestDto(String mode) {
+        if (mode.equals("TEACHER")) {
+            return new Teacher();
+        }
+        return new Teacher();
+    }
+}

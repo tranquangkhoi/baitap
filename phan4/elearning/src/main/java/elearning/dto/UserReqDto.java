@@ -16,11 +16,11 @@ import lombok.Data;
 @Data
 public class UserReqDto {
     @ApiModelProperty(value = "User ID", example = "1")
-    private Integer user_id;
+    private Integer id;
     
     @NotBlank
     @ApiModelProperty(value = "User name", example = "XYZ")
-    private String full_name;
+    private String name;
     
     @NotBlank
     @ApiModelProperty(value = "Email", example = "XYZ@gmail.com")
