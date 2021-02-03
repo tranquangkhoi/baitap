@@ -1,30 +1,13 @@
-# Bài tập tổng hợp cho lớp Clean Code
-## Quy cách nộp bài tập:
-1. Sinh viên tạo git repo của riêng mình
-2. Lập trình bằng ngôn ngữ Java, sử dụng Spring Boot framework
-3. Tạo file ReadMe.md định dạng Markdown rồi trả lời trực tiếp vào câu hỏi trong file này. Phần lý thuyết có viết tự luận và trả lời trắc nghiệm chọn 1 đáp án trong 4 lựa chọn. [Xem mẫu file này](HomeWork.md)
-4. Tập trung code vào các thư mục như sau
-   ```
-   .
-   ├── phan1 <-- Mã nguồn lập trình phần 1
-   ├── phan2 <-- Mã nguồn lập trình phần 2
-   ├── phan3
-   ├── phan4
-   ├── phan5
-   └── ReadMe.md <-- Viết tự luận, trả lời câu hỏi trắc nghiệm
-   ```
-
-
-Có một số phần yêu cầu lập trình Java. Các bạn nên sử dụng Spring Boot. Tham khảo một số tutorial và code lập trình Spring Boot
-- [Spring Boot căn bản](https://github.com/TechMaster/SpringBootBasic/tree/main/basic)
-- [3 phương pháp Depency Injection](https://github.com/TechMaster/SpringBootBasic/tree/main/bean/05DifferentWaysDI/demobean)
-- [Lập trình CRUD không dùng cơ sở quan hệ](https://github.com/TechMaster/SpringBootBasic/tree/main/crud)
-- [Lập trình JPA - ORM kết nối CSDL](https://github.com/TechMaster/SpringBootBasic/tree/main/jpa)
-- [Hướng dẫn sử dụng Markdown](https://viblo.asia/helps/cach-su-dung-markdown-bxjvZYnwkJZ)
-
 ## Phần 1: Clean Code căn bản
 
-1. Hãy tham khảo slide [CleanCode.pdf](../03Basic/CleanCode.pdf) tóm tắt 5 mục tiêu chính của Clean Code.
+1. Tóm tắt 5 mục tiêu chính của Clean Code.
+```
+1. Code phản ánh đầy đủ thiết kế một cách rõ ràng nhất
+2. Code dễ đọc, dễ maintain, khả năng tái sử dụng cao
+3. Giảm thiểu nguy cơ bug tiềm ẩn
+4. Dễ dàng mở rộng mà không ảnh hưởng đến các chức năng đã xây dựng trước đó
+5. Các thành phần trong code độc lập nhau, tạo thuận lợi triển khai làm việc theo nhóm
+```
 2. Trong một công ty X, có ba nhóm phần mềm, làm cùng công nghệ, số lượng thành viên cũng như kinh nghiệm tương đương nhau. Cả ba đều muốn áp dụng Clean Code vào dự án của mình và có 3 cách tiếp cận khác nhau.
    - Team A: Ưu tiên tiến độ dự án trước, deliver được phiên bản đầu tiên, thì mới cho thành viên tham khảo Clean Code rồi áp dụng, refactor code ở phiên bản kế tiếp
    - Team B: Clean Code là cực kỳ quan trọng, do đó dành hẳn 30% thời gian của toàn bộ dự án để đào tạo Clean Code cho thành viên sau đó mới bắt đầu lập trình
@@ -32,7 +15,15 @@ Có một số phần yêu cầu lập trình Java. Các bạn nên sử dụng 
 
 Nếu bạn là team lead bạn sẽ chọn phương án nào? Giải thích tại sao?
 
+```
+Phương án của team C
+```
+
 3. Bạn là một team lead, khi bạn giới thiệu các quy tắc Clean Code cho các đồng đội trẻ. Có một số bạn cho rằng Clean Code chỉ làm phức tạp thêm vấn đề, và chậm lại hiệu suất làm việc của nhóm. Bạn sẽ trả lời họ thế nào?
+
+```
+Giải thích cho các thành viên trẻ biết về các lợi ích mà cleancode mang lại.
+```
 
 4. Bob, Alice, Toàn, Vân được sếp giao cho viết một hàm tính lương tăng theo năm làm việc. Năm đầu tiên nhân viên sẽ nhận mức lương kiểu integer là ```initialSalary```, cứ tròn 12 tháng, nhân viên được tăng lương bằng cách nhân với hệ số ```raise > 1.0``` được cài đặt sẵn. Công thức là ```Salary at Nth year = initialSalary * (1 + raise)^N```
 N = 0, năm đầu tiên
@@ -69,6 +60,9 @@ int calculateSalaryAfterYears(int initialSalary, int NthYear);
 ```
 
 Trong 4 đề xuất trên đề xuất nào là phù hợp với quy ước trong CleanCode?
+```
+Đề xuất của Vân
+```
 
 5. Hãy lập trình mô hình hoá nghiệp vụ sau đây. Cụ thể là hãy bổ xung các method để hoàn thiện logic. Quan trọng hãy tuân thủ quy tắc Clean Code.
 - 1 User có thể viết nhiều bài Post, hoặc xoá
