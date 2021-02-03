@@ -104,7 +104,7 @@ private class Comment{
 ```
 ## Phần 2: OOP và SOLID
 ### 1. Hãy lập trình Java để thực hiện thiết kế như hình vẽ
-   ![](../05OOP/jungle/src/main/java/graphiceditor/after/interface.jpg)
+   Tham chiếu [Phần 2](phan2)
 
 ### 2. Composition over Inheritance và DI
 **Bài tập không bắt buộc, sinh viên làm sẽ được cộng điểm**
@@ -117,23 +117,7 @@ Bạn là kỹ sư phần mềm mô phỏng, hãy viết code Java để mô ph�
 Nếu bạn hỏi tôi nên viết như thế nào? Tôi sẽ trả lời lập trình là một công việc sáng tạo. Nhưng làm sao sáng tạo của bạn, đồng nghiệp hiểu được, dùng được và cùng tham gia code. Vậy bạn hãy lập trình để làm sao tôi (đồng nghiệp code của bạn) hiểu được code của bạn. Đừng phức tạp hoá vấn đề quá, nội dung method đôi khi chỉ cần dùng ```System.out.println("Some text here");```. Ngoài ra bạn hãy tạo dự án Spring Boot để tận dụng các annotation như ```@Autowired```, ```@Value```, ```@Configuration``` để thực hiện kỹ thuật Dependency Injection.
 
 ## Phần 3: Thiết kế CSDL Quan hệ theo đặc tả
-### Mô tả bài toán
-
-Giả sử các bạn đang cần xây dựng một hệ thống phần mềm để quản lý khóa học cho một cơ sở giáo dục (Course Management) với các đặc tả sau:
-
-1. Hệ thống gồm 2 loại người dùng (user): giảng viên (teacher) và học viên (student).
-- Thông tin chung của người dùng bao gồm: ID, họ tên (name), email, mật khẩu (password).
-- Thông tin của giảng viên bao gồm: các thông tin chung và số điện thoại (phone), số năm kinh nghiệm (experiences).
-- Thông tin của học viên gồm: các thông tin chung và niên khóa (year).
-2. Nội dung giảng dạy được chia làm các khóa học (course). Mỗi một khóa học do một giảng viên phụ trách.
-- Thông tin của mỗi khóa học bao gồm: tên khóa học (name), mô tả (description), địa điểm tổ chức (location), thời điểm bắt đầu (opened).
-3. Học viên muốn tham gia một khóa học thì cần tiến hành ghi danh (enroll). Một học viên có thể ghi danh nhiều khóa học.
-
-### Yêu cầu của bài tập
-
-Các bạn hãy xác định các thực thể tham gia trong phần mềm và thiết kế cơ sở dữ liệu cho phần mềm:
-- Tránh sử dụng các anti-pattern đã được tìm hiểu trong buổi 12.
-- Đưa ra một Lược đồ quan hệ thực thể (ERD) để biểu diễn thông tin và mối quan hệ giữa các thực thể.
+Tham chiếu [Phần 3](phan3)
 
 ## Phần 4: Thiết kế RESTful API 1
 ### Yêu cầu của bài tập
