@@ -16,7 +16,7 @@
 Nếu bạn là team lead bạn sẽ chọn phương án nào? Giải thích tại sao?
 
 ```
-Phương án của team C
+Đáp án : Phương án của team C
 ```
 
 3. Bạn là một team lead, khi bạn giới thiệu các quy tắc Clean Code cho các đồng đội trẻ. Có một số bạn cho rằng Clean Code chỉ làm phức tạp thêm vấn đề, và chậm lại hiệu suất làm việc của nhóm. Bạn sẽ trả lời họ thế nào?
@@ -61,7 +61,7 @@ int calculateSalaryAfterYears(int initialSalary, int NthYear);
 
 Trong 4 đề xuất trên đề xuất nào là phù hợp với quy ước trong CleanCode?
 ```
-Đề xuất của Vân
+Đáp án : Đề xuất của Vân
 ```
 
 5. Hãy lập trình mô hình hoá nghiệp vụ sau đây. Cụ thể là hãy bổ xung các method để hoàn thiện logic. Quan trọng hãy tuân thủ quy tắc Clean Code.
@@ -104,7 +104,7 @@ private class Comment{
 ```
 ## Phần 2: OOP và SOLID
 ### 1. Hãy lập trình Java để thực hiện thiết kế như hình vẽ
-   Tham chiếu [Phần 2](phan2)
+   Đáp án : Tham chiếu [Phần 2](phan2)
 
 ### 2. Composition over Inheritance và DI
 **Bài tập không bắt buộc, sinh viên làm sẽ được cộng điểm**
@@ -117,7 +117,7 @@ Bạn là kỹ sư phần mềm mô phỏng, hãy viết code Java để mô ph�
 Nếu bạn hỏi tôi nên viết như thế nào? Tôi sẽ trả lời lập trình là một công việc sáng tạo. Nhưng làm sao sáng tạo của bạn, đồng nghiệp hiểu được, dùng được và cùng tham gia code. Vậy bạn hãy lập trình để làm sao tôi (đồng nghiệp code của bạn) hiểu được code của bạn. Đừng phức tạp hoá vấn đề quá, nội dung method đôi khi chỉ cần dùng ```System.out.println("Some text here");```. Ngoài ra bạn hãy tạo dự án Spring Boot để tận dụng các annotation như ```@Autowired```, ```@Value```, ```@Configuration``` để thực hiện kỹ thuật Dependency Injection.
 
 ## Phần 3: Thiết kế CSDL Quan hệ theo đặc tả
-Tham chiếu [Phần 3](phan3)
+Đáp án : Tham chiếu [Phần 3](phan3)
 
 ## Phần 4: Thiết kế RESTful API 1
 ### Yêu cầu của bài tập
@@ -187,6 +187,8 @@ Các yêu cầu:
 - Error message trong response body cần rõ ràng, cung cấp các thông tin cần thiết để xác định nguyên nhân lỗi, không chứa thông tin password.
 - HTTP status code phù hợp.
 6. Cho phép log request body của API nhưng email và password cần được convert thành `******`.
+
+Đáp án : Tham chiếu [Phần 4](phan4)
 
 ## Phần 5: Thiết kế RESTful API 2
 ### Yêu cầu của bài tập
@@ -442,6 +444,6 @@ Các yêu cầu:
    ```
       A. Adjacency list
       B. Path enumeration
-     >C. Nested Set
+      >C. Nested Set
       D. Closure table
    ```
