@@ -15,6 +15,7 @@ import lombok.Data;
  */
 @Data
 public class UserReqDto {
+    
     @ApiModelProperty(value = "User ID", example = "1")
     private Integer id;
     
@@ -30,10 +31,11 @@ public class UserReqDto {
     @ApiModelProperty(value = "User password", example = "123456")
     private String password;
     
-    @ApiModelProperty()
-    private TeacherDto teacher;
-    
     @NotBlank
     @ApiModelProperty(value = "Mode", example = "TEACHER")
     private String mode;
+    
+    TeacherDto teacher;
+    
+    StudentDto student;
 }

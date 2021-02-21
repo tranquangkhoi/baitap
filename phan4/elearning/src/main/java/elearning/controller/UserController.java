@@ -9,12 +9,16 @@ import elearning.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import elearning.entity.User;
 import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import elearning.dto.UserReqDto;
 import elearning.dto.UserResDto;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponse;
+import io.swagger.annotations.ApiResponses;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 /**
  *
  * @author Admin
@@ -23,10 +27,16 @@ import elearning.dto.UserResDto;
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
 public class UserController {
+    
     private final UserService userService;
     
     @PostMapping("/users")
-    public UserResDto createUser(@Valid @RequestBody UserReqDto user) {
-        return userService.saveUser(user);
+    @ApiOperation("Create user")
+    @ApiResponses({
+        @ApiResponse(code = 200, message = "Create user successfully")
+    })
+    public ResponseEntity<UserResDto> createUser(@RequestBody UserReqDto userReqDto) {
+        UserResDto response = userService.saveUser(userReqDto);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }

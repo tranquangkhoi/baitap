@@ -11,9 +11,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import elearning.dto.UserResDto;
 import elearning.dto.UserReqDto;
-import elearning.entity.IUserRequest;
-import elearning.entity.Teacher;
-import elearning.entity.UserRequestFactory;
+import elearning.entity.User;
+import elearning.factory.UserFactory;
+import org.modelmapper.ModelMapper;
 
 /**
  *
@@ -23,18 +23,14 @@ import elearning.entity.UserRequestFactory;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
+    private final UserFactory userFactory;
+    private final ModelMapper modelMapper;
     
     @Transactional
     public UserResDto saveUser(UserReqDto userReqDto) {
-        //UserRequestFactory userRequestFactory = new UserRequestFactory();
-        Teacher userRequest = new Teacher();
-        userRequest.setId(userReqDto.getId());
-        userRequest.setName(userReqDto.getName());
-        userRequest.setEmail(userReqDto.getEmail());
-        userRequest.setPassword(userReqDto.getPassword());
-        userRequest.setExperiences(userReqDto.getTeacher().getExperiences());
-        userRequest.setPhone(userReqDto.getTeacher().getPhone());
-        Teacher savedUser = userRepository.save(userRequest);
-        return null;
+        User userRequest = userFactory.createUser(userReqDto);
+        User savedUser = userRepository.save(userRequest);
+        UserResDto response = modelMapper.map(savedUser, UserResDto.class);
+        return response;
     }
 }

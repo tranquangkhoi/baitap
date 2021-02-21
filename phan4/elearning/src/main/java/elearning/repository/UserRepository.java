@@ -5,7 +5,7 @@
  */
 package elearning.repository;
 
-import elearning.entity.Teacher;
+import elearning.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,6 +14,6 @@ import org.springframework.stereotype.Repository;
  * @author Admin
  */
 @Repository
-public interface UserRepository extends JpaRepository<Teacher, Integer> {
+public interface UserRepository extends JpaRepository<User, Integer> {
 
 }

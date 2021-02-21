@@ -18,9 +18,7 @@ import lombok.Data;
  */
 @Data
 @Entity
-@Table(name = "teachers")
-public class Teacher extends User implements Serializable {
-    private String phone;
-
-    private Integer experiences;
+@Table(name = "students")
+public class Student extends User implements Serializable {
+    private String year;
 }

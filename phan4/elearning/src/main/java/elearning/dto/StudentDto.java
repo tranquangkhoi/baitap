@@ -3,12 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package elearning.entity;
+package elearning.dto;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 /**
  *
  * @author Admin
  */
-public interface IUserRequest {
+@Data
+public class StudentDto {
     
+    @ApiModelProperty(value = "Year", example = "2020")
+    private String year;
 }
