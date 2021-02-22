@@ -9,6 +9,7 @@ import elearning.strategy.sort.course.ISortCourseStrategy;
 import elearning.strategy.sort.course.SortCourseNameAsc;
 import elearning.strategy.sort.course.SortCourseOpenedDesc;
 import lombok.RequiredArgsConstructor;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 /**
@@ -20,6 +21,10 @@ import org.springframework.stereotype.Component;
 public class SortCourseStrategyFactory {
 
     public ISortCourseStrategy createSortCourseStrategyFactory(String sortBy) {
+        if(StringUtils.isEmpty(sortBy)) {
+            return new SortCourseNameAsc();
+        }
+        
         switch (sortBy) {
             case "name":
                 return new SortCourseNameAsc();
