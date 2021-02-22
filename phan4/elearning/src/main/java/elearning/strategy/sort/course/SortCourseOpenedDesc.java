@@ -6,8 +6,8 @@
 package elearning.strategy.sort.course;
 
 import elearning.entity.Course;
+import java.util.Collections;
 import java.util.List;
-import java.util.Comparator;
 /**
  *
  * @author Admin
@@ -16,7 +16,7 @@ public class SortCourseOpenedDesc implements ISortCourseStrategy {
 
     @Override
     public void sort(List<Course> courses) {
-        courses.sort(Comparator.comparing(Course::getOpened));
+        Collections.sort(courses, (Course val1, Course val2) -> val1.getOpened().compareTo(val2.getOpened()) > 0  ? -1 : 1);
     }
 
     
