@@ -6,14 +6,13 @@
 package elearning.controller;
 
 import elearning.service.UserService;
+import elearning.dto.UserReqDto;
+import elearning.dto.UserResDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import javax.validation.Valid;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import elearning.dto.UserReqDto;
-import elearning.dto.UserResDto;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;

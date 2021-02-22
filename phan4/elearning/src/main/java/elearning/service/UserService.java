@@ -6,9 +6,6 @@
 package elearning.service;
 
 import elearning.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import elearning.dto.UserResDto;
 import elearning.dto.UserReqDto;
 import elearning.entity.User;
@@ -16,6 +13,9 @@ import elearning.error.ErrorCodes;
 import elearning.error.ServiceRuntimeException;
 import elearning.factory.UserFactory;
 import org.modelmapper.ModelMapper;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.http.HttpStatus;
 
 /**

@@ -5,7 +5,6 @@
  */
 package elearning.dto;
 
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -13,10 +12,9 @@ import lombok.Data;
  * @author Admin
  */
 @Data
-public class UserResDto {
-    @ApiModelProperty(value = "User ID", example = "1")
+public class CourseResDto {
     private Integer id;
-
-    @ApiModelProperty(value = "User name", example = "XYZ")
     private String name;
+    private String location;
+    private String teacherName;
 }

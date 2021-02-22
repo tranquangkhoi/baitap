@@ -67,6 +67,12 @@
 			<!-- To fix conflict when combine Spring HATEOAS with Swagger -->
 			<version>2.8.0</version>
 		</dependency>
+	 <dependency>
+	  <groupId>org.apache.commons</groupId>
+	  <artifactId>commons-lang3</artifactId>
+	  <version>3.8.1</version>
+	  <type>jar</type>
+	 </dependency>
 	</dependencies>
 
 	<build>
