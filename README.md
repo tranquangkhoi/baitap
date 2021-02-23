@@ -102,6 +102,8 @@ private class Comment{
    //---- Bổ xung method vào đây. Nhiệm vụ của các bạn đó !
 }
 ```
+Đáp án : Tham chiếu [Phần 1](phan1)
+
 ## Phần 2: OOP và SOLID
 ### 1. Hãy lập trình Java để thực hiện thiết kế như hình vẽ
    Đáp án : Tham chiếu [Phần 2](phan2)
@@ -230,6 +232,8 @@ Các yêu cầu:
 3. RESTful API endpoint cần phải phù hợp với các convention đã được học và được đánh version.
 4. Áp dụng caching cho API để tăng performance.
 5. Đảm bảo các chức năng của bài tập 2 vẫn hoạt động đúng.
+
+Đáp án : Tham chiếu [Phần 4](phan4)
 
 ## Trắc nghiệm
 1. Điều nào không đúng khi nói về Design Pattern?
